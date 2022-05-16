@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Đăng kí đồ án tốt nghiệp </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="dangki.css">
+
+</head>
+<body onload="renderListStudent()" >
+
+    <div class="container">        
+        <header>
+            <img src="./img/banner1.jpg" height="150 " width="1000" alt="">
+        </header>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Đào tạo</a></li>
+                    <li><a href="#">Đăng kí</a></li>
+                    <li><a href="#">Tuyển sinh</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="search" placeholder="Search...">
+                <button id="timkiem"> Tìm kiếm</button>
+            </div>
+        </nav>
+        <div id="doan">
+          <a href=""> <img src="img/doan.jpg" height="400" width="1000" alt=""></a>
+
+
+    <div class="form-student">
+        <h3> Thông tin sinh viên đăng kí</h3>
+
+        <label >Họ tên:</label>
+        <input type="text" id="fullname"/>
+        <span id="fullname-error" class="error"></span>
+        <br/>
+
+        <label >Mã sinh viên:</label>
+        <input type="text" id="msv"/>
+        <span id="msv-error" class="error"></span>
+        <br/>
+
+        <label >Email:</label>
+        <input type="text" id="email"/>
+        <span id="email-error" class="error"></span>
+        <br/>
+
+        <label >GPA:</label>
+        <input type="text" id="phone"/>
+        <span id="phone-error" class="error"></span>
+        <br/>
+
+        <label >Đề tài đăng kí:</label>
+        <input type="text" id="address"/>
+        <span id="address-error" class="error"></span>
+        <br/>
+
+        <label >Thầy(Cô):</label>
+        <input type="text" id="thayco"/>
+        <span id="thayco-error" class="error"></span>
+        <br/>
+
+        <label> Giới tính: </label>
+        <input type="radio" name="gender" id="male" value="1"/> Nam
+        <input type="radio" name="gender" id="female" value="2"/> Nữ       
+        <span id="gender-error" class="error"></span>                                         
+        <br/>
+    
+        <label>&nbsp;</label>
+        <button onclick="save()"> Lưu lại </button>
+    </div>
+
+    <div class="lish-student" id="lish-student">
+        <h3>Danh sách sinh viên đăng kí</h3>
+        <table id="grid-students" width="650" border="1" cellpadding="0"  cellpadding="0">
+        </table>
+    </div>
+    <script src='lodash.js'></script>
+    <script src="dangki.js"></script>
+</body>
+</html>
+
